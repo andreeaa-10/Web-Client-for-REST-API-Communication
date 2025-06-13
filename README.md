@@ -1,31 +1,8 @@
-In cadrul ultimei teme la PCOM am avut de implementat un sistem de management
-al unei biblioteci de filme. Sistemul include atat functionalitati pentru admin,
+Sistemul include atat functionalitati pentru admin,
 care poate administra conturi de useri, prin crearea, afisarea si stergerea lor,
 cat si functionalitati la nivel de user, care poate manipula filme si colectii de
 filme, tot prin creare, afisare si stergere. Exista 19 functii principale, care
 indeplinesc functionalitatile mentionate.
-
-## Detalii de implementare
-* implementarea a durat aproximativ 20h, iar punctul de start a fost laboratorul 9, de 
-unde am luat fisierele buffer.c/.h, requests.c/.h, helper.c/.h.
-* in functiile care primesc input de la tastatura exista verificari ale corectitudinii
-datelor: pentru username si parole se verifica sa nu existe spatii libere, iar in cazul
-numerelor se verifica sa nu se introduca un alt tip decat cel cerut sau un sir de caractere.
-* pentru parsarea JSON am folosit biblioteca parson.
-* principalele probleme: 
-  * citirea datelor de la tastatura si validarea tipurilor introduse(scanf intoarce eroare
-  daca introducem un sir in loc de numar, iar in cazul tipurilor numerice pentru a valida introducerea
-  unui int am luat un caracter extra ce va fi citit de la tastatura, in cazul in care acela 
-  este '.' in loc de '\n' intorc mesaj de eroare).
-  * parsarea JSON pe colectii a fost putin mai complicata decat cea normala.
-  * add_collection a fost putin neintuitiva, am stat ceva timp pana am gasit logica 
-  potrivita si am adaptat functiile add_movie_to_collection si delete_collection pentru
-  a se mula pe lipsa de input cand o apelam din add_collection.
-  * unele functii generau mai multe mesaje de eroare, mai ales in add_collection, de unde
-  veneau mesaje si din delete_collection, si din add_movie_to_collection, ceea ce era
-  confusing pentru checker si ducea la propagarea mesajului in testul urmator, respectiv
-  fail, asadar a durat putin pana am gasit o solutie ce imi va afisa un numar ok de 
-  mesaje de eroare.
 
 ## Fluxul programului
 * se deschide conexiunea cu serverul.
