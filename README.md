@@ -153,5 +153,4 @@ de JSON.
 in mesaj pentru a fi validat de server in functiile unde este solicitat.
 
 ## Referinte
-* https://gitlab.cs.pub.ro/pcom/pcom-laboratoare-public/-/tree/master/lab9
 * https://github.com/kgabis/parson
